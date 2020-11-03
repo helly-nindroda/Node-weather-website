@@ -1,0 +1,30 @@
+{{!-- <!DOCTYPE html> --}}
+<html>
+    <head>
+        <title>Weather</title>
+        <link rel="icon" href="./img/weather.png">
+        <link rel="stylesheet" href="./css/styles.css">
+        
+
+    </head>
+    <body>
+
+        {{!-- <h1>{{title}}</h1>   --}}
+        {{!-- {{Taking data from view dynamically}} --}}
+        <div class="main-content">
+             {{>header}}
+             <p>use this site to get your weather.</p>
+            <form>
+                <input placeholder="Location here">
+                <button>Search</button>
+            </form>
+
+            <p id="message-1"></p>
+            <p id="message-2"></p>             
+        </div>
+       
+        {{!-- <p>Created By: {{name}}</p> --}}
+        {{>footer}}
+        <script src="./js/app.js"></script>
+    </body>
+</html>
