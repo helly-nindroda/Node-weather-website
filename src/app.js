@@ -9,6 +9,7 @@ const forecast=require('./utilis/forecast');
 const { response } = require('express');
 
 const app=express();
+const port = process.env.PORT || 3000;   //using port of heroku or if localhost then 3000 for app.listen
 
 
 //define path for express config
@@ -116,6 +117,6 @@ app.get('*',(req,res)=>{
 })
 
 
-app.listen(3000,()=>{  //3000 is port no. so on browser localhost:3000
-    console.log("starting up");
+app.listen(port,()=>{  //3000 is port no. so on browser localhost:3000
+    console.log("server is up on port "+port);
 })
